@@ -1,6 +1,6 @@
 sudo cat << EOF | sudo tee /etc/apache2/sites-available/eztraining.conf
 <VirtualHost *:80>
-    <Directory /var/www/*>
+    <Directory /var/www/ez/web>
         Options FollowSymLinks
         AllowOverride None
         # depending on your global Apache settings, you may need to uncomment and adapt
@@ -108,11 +108,12 @@ sudo cat << EOF | sudo tee /etc/apache2/sites-available/eztraining.conf
         RewriteRule .* /index.php
     </IfModule>
  
-    DocumentRoot /var/www/*
+    DocumentRoot /var/www/ez/web/
     ServerName *.dev
     ServerAlias *.dev
     UseCanonicalName Off
-    VirtualDocumentRoot "/var/www/%1"
+    # @TODO: fix it
+#    VirtualDocumentRoot "/var/www/ez/web/%1"
  
 </VirtualHost>
 EOF

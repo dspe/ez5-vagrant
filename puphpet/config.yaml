@@ -75,10 +75,10 @@ apache:
         - rewrite
     vhosts:
         79huXL6QzD9u:
-            servername: www.eztraining.dev
+            servername: www.ez5training.dev
             serveraliases:
-                - admin.eztraining.dev
-            docroot: /var/www/ez
+                - admin.ez5training.dev
+            docroot: /var/www/ez/web
             port: '80'
             setenv:
                 - 'APP_ENV dev'
